@@ -11,7 +11,7 @@ import java.util.Arrays;
 public class JdbcTest {
 
     static final String JDBC_DRIVER = "io.github.iamazy.elasticsearch.dsl.jdbc.ElasticDriver";
-    static final String DB_URL = "jdbc:es://localhost:9200/device_search?useSSL=false&mode=single";
+    static final String DB_URL = "jdbc:es://172.17.4.179:9300/device_search?useSSL=false&mode=single";
 
     static final String USER = "admin";
     static final String PASS = "admin";
