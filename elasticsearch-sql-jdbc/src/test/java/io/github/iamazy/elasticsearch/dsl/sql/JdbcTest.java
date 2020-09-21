@@ -11,10 +11,10 @@ import java.util.Arrays;
 public class JdbcTest {
 
     static final String JDBC_DRIVER = "io.github.iamazy.elasticsearch.dsl.jdbc.ElasticDriver";
-    static final String DB_URL = "jdbc:es://172.17.4.179:9300/device_search?useSSL=false&mode=single";
+    static final String DB_URL = "jdbc:es://172.17.4.179:9200/device_search?useSSL=false&mode=single";
 
-    static final String USER = "lifekh-mp-sit-ro";
-    static final String PASS = "OloROMuSECAdiNsELeMurLAnCHIMaNt";
+    static final String USER = "elastic";
+    static final String PASS = "K4k19tINJn8WOLJmTvpNJIJ59Iv0YYz1SBw0ww1+nRv+";
 
     private static void conn1(){
         Connection conn = null;
@@ -132,7 +132,7 @@ public class JdbcTest {
             ps = conn.prepareStatement(sql);
             ps.setString(1,"bbb");
             ps.setInt(2,3231);
-            ps.setObject(3, Arrays.asList(1,3,2));
+            ps.setObject(3, Arrays.asList(4,3,2));
             ps.setString(4,"8373");
             int rs = ps.executeUpdate();
             System.out.println(rs);
@@ -188,7 +188,10 @@ public class JdbcTest {
     }
 
     public static void main(String[] args) {
-        insert1();
+          conn1();
+        //prepareStatement1();
+        //insert1();
+        //insert2();
         //scroll();
     }
 }
